@@ -12,3 +12,9 @@ Como usuário deverei poder realizar o calculo de horas extras trabalhadas
 Como usuário devo poder calcular o meu salário bruto, sendo ele o salário total menos os impostos
 
 Eu como usuário devo conseguir realizar o calculo das minhas férias no sistema
+
+
+Grupo:
+Caio Foramiglio Vieira
+Gustavo Santos Guimarães
+Guilherme Simon Lehr
