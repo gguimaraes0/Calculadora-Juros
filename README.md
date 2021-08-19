@@ -1,5 +1,5 @@
 # Calculadora-Juros/Trabalhista
-Calculadora de juros feita na IDE eclipse.
+Calculadora de juros e trabalhista feita na IDE eclipse utilizando o Java 8
 
 Para escrever os requisitos decidimos utilizar user stories
 
