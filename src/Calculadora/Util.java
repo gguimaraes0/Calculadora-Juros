@@ -76,7 +76,8 @@ public class Util {
 			conta.JurosSimples();
 		}
 		case 2: {
-			
+			Contas conta = new Contas();
+			conta.JurosCompostos();
 			break;
 		}
 		case 3: {
@@ -89,15 +90,6 @@ public class Util {
 			break;
 		}
 
-		}
-	}
-
-	public static boolean isNumber(String text) {
-		try {
-			Integer.parseInt(text);
-			return true;
-		} catch (Exception e) {
-			return false;
 		}
 	}
 
