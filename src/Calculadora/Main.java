@@ -7,15 +7,18 @@ public class Main {
 		int result;
 		do {
 			Util util = new Util();
+
 			util.Menu();
+
 			result = util.ValidaMenu();
 
 			if (result == 0)
 				break;
-			if (result == 7) {
+			if (result == 7)
 				continue;
-				
-			}
+
+			util.ExecutaOperacao(result);
+			
 		} while (result != 0);
 
 	}
