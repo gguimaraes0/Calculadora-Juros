@@ -1,23 +1,19 @@
 package Calculadora;
 
-import java.util.Scanner;
-
 public class Contas {
 
-	@SuppressWarnings("resource")
-	public int JurosSimples()
+	public void JurosSimples()
 
 	{
 		try {
-			Scanner in = new Scanner(System.in);
 			System.out.println("Digite o Valor Inicial");
-			double ValorInicial = in.nextDouble();
+			double ValorInicial = Util.DigiteValor();
+
 			System.out.println("Digite a Taxa de Juros (Apenas digitos)");
-			in = new Scanner(System.in);
-			double TaxaJuros = in.nextDouble();
+			double TaxaJuros = Util.DigiteValor();
+
 			System.out.println("Digite o Período em Meses");
-			in = new Scanner(System.in);
-			int PeriodoMeses = in.nextInt();
+			double PeriodoMeses = Util.DigiteValor();
 
 			double result = ValorInicial * (TaxaJuros / 100) * PeriodoMeses + ValorInicial;
 			Util util = new Util();
@@ -26,12 +22,10 @@ public class Contas {
 					"O seu valor inicial foi de: " + ValorInicial + "R$" + "\n" + "A taxa de Juros aplicada foi de: "
 							+ TaxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + PeriodoMeses + "Meses"
 							+ "\n" + "O Valor Calculado foi de: " + result + "R$" + "\n");
-			return 1;
 		} catch (
 
 		Exception e) {
-			System.out.println("Por favor digite números válidos" );
-			return 0;
+			System.out.println("Por favor digite números válidos");
 		}
 	}
 

@@ -71,15 +71,12 @@ public class Util {
 		switch (operacao) {
 
 		case 1: {
-			int result;
-			do {
 
-				Contas conta = new Contas();
-				result = conta.JurosSimples();
-			} while (result == 0);
-			break;
+			Contas conta = new Contas();
+			conta.JurosSimples();
 		}
 		case 2: {
+			
 			break;
 		}
 		case 3: {
@@ -101,6 +98,18 @@ public class Util {
 			return true;
 		} catch (Exception e) {
 			return false;
+		}
+	}
+
+	public static double DigiteValor() {
+		try {
+			@SuppressWarnings("resource")
+			Scanner teclado = new Scanner(System.in);
+			double result = teclado.nextDouble();
+			return result;
+		} catch (Exception e) {
+			System.out.println("Por favor digite números válidos");
+			return DigiteValor();
 		}
 	}
 
