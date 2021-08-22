@@ -11,8 +11,8 @@ public class Util {
 		System.out.println("Calculadora\n");
 		System.out.println("1- Juros Simples");
 		System.out.println("2- Juros Compostos");
-		System.out.println("3- Hora Extra");
-		System.out.println("4- Salário");
+		System.out.println("3- Salário Líquido");
+		System.out.println("4- Décimo Terceiro");
 		System.out.println("5- Férias");
 		System.out.println("0- Sair\n");
 	}
@@ -68,19 +68,19 @@ public class Util {
 	}
 
 	public void ExecutaOperacao(int operacao) {
+		Contas conta = new Contas();
 		switch (operacao) {
 
 		case 1: {
-
-			Contas conta = new Contas();
 			conta.JurosSimples();
+			break;
 		}
 		case 2: {
-			Contas conta = new Contas();
 			conta.JurosCompostos();
 			break;
 		}
 		case 3: {
+			conta.SalarioLiquido();
 			break;
 		}
 		case 4: {
@@ -89,7 +89,9 @@ public class Util {
 		case 5: {
 			break;
 		}
-
+		default: {
+			System.out.println("Valor inválido");
+		}
 		}
 	}
 

@@ -4,22 +4,29 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int result;
-		do {
-			Util util = new Util();
+		try {
 
-			util.Menu();
+			int result;
+			do {
+				Util util = new Util();
 
-			result = util.ValidaMenu();
+				util.Menu();
 
-			if (result == 0)
-				break;
-			if (result == 7)
-				continue;
+				result = util.ValidaMenu();
 
-			util.ExecutaOperacao(result);
-			
-		} while (result != 0);
+				if (result == 0)
+					break;
+				if (result == 7)
+					continue;
+
+				util.ExecutaOperacao(result);
+
+			} while (result != 0);
+
+			System.out.println("A aplicação foi finalizada");
+		} catch (Exception e) {
+			System.out.println("Ocorreu um erro na aplicação" + e);
+		}
 
 	}
 
