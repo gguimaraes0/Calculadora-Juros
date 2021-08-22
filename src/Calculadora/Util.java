@@ -84,9 +84,11 @@ public class Util {
 			break;
 		}
 		case 4: {
+			conta.DecimoTerceiro();
 			break;
 		}
 		case 5: {
+			conta.Ferias();
 			break;
 		}
 		default: {

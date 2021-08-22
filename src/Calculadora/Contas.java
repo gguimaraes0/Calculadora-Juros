@@ -7,21 +7,21 @@ public class Contas {
 	{
 		try {
 			System.out.println("Digite o Valor Inicial");
-			double ValorInicial = Util.DigiteValor();
+			double valorInicial = Util.DigiteValor();
 
 			System.out.println("Digite a Taxa de Juros (Apenas digitos)");
-			double TaxaJuros = Util.DigiteValor();
+			double taxaJuros = Util.DigiteValor();
 
 			System.out.println("Digite o Período em Meses");
-			double PeriodoMeses = Util.DigiteValor();
+			double periodoMeses = Util.DigiteValor();
 
-			double result = ValorInicial * (TaxaJuros / 100) * PeriodoMeses + ValorInicial;
+			double result = valorInicial * (taxaJuros / 100) * periodoMeses + valorInicial;
 			Util util = new Util();
 			util.ArredondaValor(result);
 
 			System.out.println(
-					"O seu valor inicial foi de: " + ValorInicial + "R$" + "\n" + "A taxa de Juros aplicada foi de: "
-							+ TaxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + PeriodoMeses + "Meses"
+					"O seu valor inicial foi de: " + valorInicial + "R$" + "\n" + "A taxa de Juros aplicada foi de: "
+							+ taxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + periodoMeses + "Meses"
 							+ "\n" + "O Valor Calculado foi de: " + result + "R$" + "\n");
 		} catch (
 
@@ -35,19 +35,19 @@ public class Contas {
 	{
 		try {
 			System.out.println("Digite o Valor Inicial");
-			double ValorInicial = Util.DigiteValor();
+			double valorInicial = Util.DigiteValor();
 
 			System.out.println("Digite a Taxa de Juros (Apenas digitos)");
-			double TaxaJuros = Util.DigiteValor();
+			double taxaJuros = Util.DigiteValor();
 
 			System.out.println("Digite o Período em Meses");
-			double PeriodoMeses = Util.DigiteValor();
+			double periodoMeses = Util.DigiteValor();
 
-			double result = ValorInicial * Math.pow((1 + TaxaJuros / 100), PeriodoMeses);
+			double result = valorInicial * Math.pow((1 + taxaJuros / 100), periodoMeses);
 			Util util = new Util();
 			System.out.println(
-					"O seu valor inicial foi de: " + ValorInicial + "R$" + "\n" + "A taxa de Juros aplicada foi de: "
-							+ TaxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + PeriodoMeses + "Meses"
+					"O seu valor inicial foi de: " + valorInicial + "R$" + "\n" + "A taxa de Juros aplicada foi de: "
+							+ taxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + periodoMeses + "Meses"
 							+ "\n" + "O Valor Calculado foi de: " + util.ArredondaValor(result) + "R$" + "\n");
 		} catch (
 
@@ -61,18 +61,56 @@ public class Contas {
 	{
 		try {
 			System.out.println("Digite o Valor do Salário Bruto");
-			double SalarioBruto = Util.DigiteValor();
+			double salarioBruto = Util.DigiteValor();
 
-			double result = ValorINSS(SalarioBruto);
+			double result = ValorINSS(salarioBruto);
 			result = ValorIRRF(result);
 
 			Util util = new Util();
-			System.out.println("O Valor bruto é de: " + SalarioBruto + "O seu Salário Líquido é de: "
+			System.out.println("O Valor bruto é de: " + salarioBruto + "O seu Salário Líquido é de: "
 					+ util.ArredondaValor(result) + "R$" + "\n");
 		} catch (
 
 		Exception e) {
 			System.out.println("Ocorreu um erro no cálculo do Salário Líquido" + e);
+		}
+	}
+
+	public void DecimoTerceiro() {
+		try {
+			System.out.println("Digite o Valor do Salário");
+			double salario = Util.DigiteValor();
+
+			System.out.println("Digite a Quantidade de Meses Trabalhados no Ano");
+			double meses = Util.DigiteValor();
+
+			double result = (salario / 12) * meses;
+
+			Util util = new Util();
+			System.out.println("O Valor a receber é de: " + util.ArredondaValor(result) + "R$" + "\n");
+		} catch (
+
+		Exception e) {
+			System.out.println("Ocorreu um erro no cálculo do Décimo Terceiro" + e);
+		}
+	}
+
+	public void Ferias() {
+		try {
+			System.out.println("Digite o Valor do Salário Bruto");
+			double salarioBruto = Util.DigiteValor();
+
+			salarioBruto = salarioBruto * 1.3333333;
+			
+			double result = ValorINSS(salarioBruto);
+			result = ValorIRRF(result);
+
+			Util util = new Util();
+			System.out.println("O Valor líquido a receber nas férias é de: " + util.ArredondaValor(result) + "R$" + "\n");
+		} catch (
+
+		Exception e) {
+			System.out.println("Ocorreu um erro no cálculo das férias" + e);
 		}
 	}
 
