@@ -20,9 +20,9 @@ public class Contas {
 			util.ArredondaValor(result);
 
 			System.out.println(
-					"O seu valor inicial foi de: " + valorInicial + "R$" + "\n" + "A taxa de Juros aplicada foi de: "
-							+ taxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + periodoMeses + "Meses"
-							+ "\n" + "O Valor Calculado foi de: " + result + "R$" + "\n");
+					"O seu valor inicial foi de: R$ " + valorInicial + "\n" + "A taxa de Juros aplicada foi de: "
+							+ taxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + periodoMeses + " Meses"
+							+ "\n" + "O Valor Calculado foi de: R$ " + result + "\n");
 		} catch (
 
 		Exception e) {
@@ -46,9 +46,9 @@ public class Contas {
 			double result = valorInicial * Math.pow((1 + taxaJuros / 100), periodoMeses);
 			Util util = new Util();
 			System.out.println(
-					"O seu valor inicial foi de: " + valorInicial + "R$" + "\n" + "A taxa de Juros aplicada foi de: "
-							+ taxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + periodoMeses + "Meses"
-							+ "\n" + "O Valor Calculado foi de: " + util.ArredondaValor(result) + "R$" + "\n");
+					"O seu valor inicial foi de: R$ " + valorInicial + "\n" + "A taxa de Juros aplicada foi de: "
+							+ taxaJuros + "%" + "\n" + "O Periódo de Meses utilizado foi de: " + periodoMeses + " Meses"
+							+ "\n" + "O Valor Calculado foi de: R$ " + util.ArredondaValor(result)  + "\n");
 		} catch (
 
 		Exception e) {
@@ -67,8 +67,8 @@ public class Contas {
 			result = ValorIRRF(result);
 
 			Util util = new Util();
-			System.out.println("O Valor bruto é de: " + salarioBruto + "O seu Salário Líquido é de: "
-					+ util.ArredondaValor(result) + "R$" + "\n");
+			System.out.println("O Valor bruto é de: " + salarioBruto + "O seu Salário Líquido é de: R$ "
+					+ util.ArredondaValor(result) + "\n");
 		} catch (
 
 		Exception e) {
@@ -87,7 +87,7 @@ public class Contas {
 			double result = (salario / 12) * meses;
 
 			Util util = new Util();
-			System.out.println("O Valor a receber é de: " + util.ArredondaValor(result) + "R$" + "\n");
+			System.out.println("O Valor a receber é de: R$ " + util.ArredondaValor(result) + "\n");
 		} catch (
 
 		Exception e) {
@@ -106,7 +106,7 @@ public class Contas {
 			result = ValorIRRF(result);
 
 			Util util = new Util();
-			System.out.println("O Valor líquido a receber nas férias é de: " + util.ArredondaValor(result) + "R$" + "\n");
+			System.out.println("O Valor líquido a receber nas férias é de: R$ " + util.ArredondaValor(result) + "\n");
 		} catch (
 
 		Exception e) {
